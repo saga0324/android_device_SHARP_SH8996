@@ -1,0 +1,3 @@
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/sh8996.mk \
+	$(LOCAL_DIR)/omni_sh8996.mk

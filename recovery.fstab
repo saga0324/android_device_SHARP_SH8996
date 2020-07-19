@@ -1,0 +1,24 @@
+/aboot		emmc	/dev/block/bootdevice/by-name/aboot		flags=display="aboot";backup=1
+/boot		emmc	/dev/block/bootdevice/by-name/boot		flags=display="boot";backup=1
+/frp		emmc	/dev/block/bootdevice/by-name/frp
+/devcfg		emmc	/dev/block/bootdevice/by-name/devcfg
+/devcfgdup	emmc	/dev/block/bootdevice/by-name/devcfgdup
+/fsc		emmc	/dev/block/bootdevice/by-name/fsc		flags=display="fsc";backup=1
+/fsg		emmc	/dev/block/bootdevice/by-name/fsg		flags=display="fsg";backup=1
+/misc		emmc	/dev/block/bootdevice/by-name/misc
+/modem		vfat	/dev/block/bootdevice/by-name/modem		flags=display="modem";mounttodecrypt;backup=1
+/modemst1	emmc	/dev/block/bootdevice/by-name/modemst1		flags=subpartitionof=/modem;backup=1
+/modemst2	emmc	/dev/block/bootdevice/by-name/modemst2		flags=subpartitionof=/modem;backup=1
+/persist	ext4	/dev/block/bootdevice/by-name/persist		flags=display="persist";backup=1
+/recovery	emmc	/dev/block/bootdevice/by-name/recovery		flags=display="recovery";backup=1
+/splash		emmc	/dev/block/bootdevice/by-name/splash		flags=display="splash";backup=1;flashimg=1
+/metadata	emmc	/dev/block/bootdevice/by-name/metadata
+/system		auto	/dev/block/bootdevice/by-name/system
+/cache		ext4	/dev/block/bootdevice/by-name/cache
+/data		ext4	/dev/block/bootdevice/by-name/userdata		flags=encryptable=/dev/block/bootdevice/by-name/metadata
+/extsd	    auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="ExtSD";storage;wipeingui;removable;backup=0
+/usbotg		auto    /dev/block/sda1		/dev/block/sda		flags=display="Usb-Otg";storage;removable;backup=0
+# Add SH Mount Point Start
+/shdiag  	emmc	/dev/block/bootdevice/by-name/shdiag 		flags=backup=1
+/vendor     ext4    /dev/block/bootdevice/by-name/systemex      flags=display="splash";backup=1;flashimg=1
+# Add SH Mount Point End

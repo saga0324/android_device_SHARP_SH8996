@@ -1,0 +1,2 @@
+add_lunch_combo omni_sh8996-eng
+add_lunch_combo omni_sh8996-userdebug
